@@ -1,14 +1,23 @@
+import React from 'react'
+import './App.css'
+// import nav from  './components/nav'
+import Nav from './components/nav'
+import Hero from './components/hero'
+
+
 function App(){
 
     return(
         <>
-        <div className="container">
-          <nav>
-            <span className="logo">
-              <img src="/images/brand_logo.png" alt="" />
-            </span>
-          </nav>
-        </div>
+        
+
+        <Nav/>
+
+        <Hero/>
+
+        
+          
+        
         </>
     )
 }
