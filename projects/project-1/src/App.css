@@ -72,10 +72,53 @@ nav .buttons button{
   width: 40%;
 }
 
+.hero-txt p{
+
+  margin-top: 2vh;
+  font-size: 1rem;
+}
+
 .hero-xt{
   display: flex;
   gap: 4vw;
   /* background: #000; */
-  padding: 10vh 10vw;
+  padding: 10vh 7vw;
 
+}
+
+/* hero btn */
+
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2vw;
+  margin-top: 2vh;
+  
+  
+}
+.hero-btn{
+  display: flex;
+  padding: 1vh 2vw;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  
+  background:#D01C28;
+  border: 0;
+}
+
+.explore-btn{
+  display: flex;
+  padding: 1vh 2vw;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+
+  color: grey;
+  
+  
+  border:2px solid #000;
 }
