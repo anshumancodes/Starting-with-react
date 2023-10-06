@@ -1,16 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+
+import "./App.css";
+import Home from "./components/pages/Home";
+import Play from "./components/pages/Play";
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  const [IsStartGame,SetIsGamestarted] = useState(false);
+
+  const toggleGame = () => {
+    SetIsGamestarted(( prev => !prev));
+  }
+  
   return (
+    
+
     <>
+
+      {IsStartGame ? <Play  /> : <Home toggle={toggleGame}/>}
+      
       
     </>
-  )
+  );
 }
 
-export default App
+export default App;

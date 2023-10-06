@@ -1,0 +1,55 @@
+.home{
+    display: flex ;
+    
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4vw;
+    flex-direction: row;
+    padding: 10vh 10vw;
+    
+  }
+  .ImageCon{
+    display: flex;
+    
+   
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+    
+  }
+  .image{
+    width: 100%;
+    
+    
+  }
+  .TextCon{
+    display: flex;
+    
+    justify-content:flex-end;
+    align-items: center;
+    /* width: 50%; */
+    gap: 5vh;
+    
+    
+  }
+  .insidecon{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    
+    
+  }
+
+  .Buttonone{
+    background: #000;
+    color: #fff;
+    padding: 1vh 2vw;
+    border: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    width:200px;
+    display: flex;
+    justify-content: center;
+  }
