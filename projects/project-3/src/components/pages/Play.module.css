@@ -31,9 +31,21 @@ Nav{
 }
 .Dicebuttons{
     display: flex;
-    gap: 40px;
-    align-items: center;
+    flex-direction:column;
+    gap: 20px;
     
+}
+.buttonContainers{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.CheckText{
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 .Dicebutton{
     height: 70px;
