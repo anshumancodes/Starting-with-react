@@ -47,7 +47,7 @@ Nav{
     font-size: 1.5rem;
     font-weight: 700;
 }
-.Dicebutton{
+/* .Dicebutton{
     height: 70px;
     width: 70px;
     background: #fff;
@@ -55,6 +55,20 @@ Nav{
     font-weight: 700;
     border:2px solid #000;
 
+} */
+.Dicebutton {
+    height: 70px;
+    width: 70px;
+    background: #fff;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 2px solid #000;
+}
+
+.Dicebutton.selected {
+    background: #000;
+    color: #fff;
 }
 
 .Dicecontainer{

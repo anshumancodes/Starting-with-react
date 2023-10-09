@@ -1,10 +1,33 @@
 import React from "react";
 import styles from "./Play.module.css";
+import { useState } from "react";
 
-const Play = ({ text }) => {
-  const diceValue = [1, 2, 3, 4, 5, 6];
+const Play = ({ Intext }) => {
+  
+  const [selected, setSelected] =useState(null);
+  const [Nowtext , setText] = useState("Select a number");
+  const [currentDice, setDice] = useState();
 
-  const diceNumber = Math.floor(Math.random() * diceValue.length);
+
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Usage for simulating a dice roll:
+
+
+
+  const rolldice = () => {
+    
+    const RandomdiceNumber = getRandomInt(1, 6);
+    
+
+  
+  setDice((prev)=> RandomdiceNumber);
+
+  }
+
+  
 
   return (
     <div className={styles.Container}>
@@ -17,12 +40,14 @@ const Play = ({ text }) => {
         </span>
 
         <span className={styles.Dicebuttons}>
-          <span className={styles.CheckText} text={text}></span>
+          <span className={styles.CheckText}>{Nowtext}</span>
 
           <div className={styles.buttonContainers}>
 
             {diceValue.map((value, index) => (
-              <button className={styles.Dicebutton} key={index}>
+              <button className={`${styles.Dicebutton} ${selected === value ? styles.selected : ''}`} 
+
+              key={index} onClick={()=> setSelected(value) }>
                 {value}
               </button>
             ))}
@@ -33,11 +58,12 @@ const Play = ({ text }) => {
 
       <div className={styles.Dicecontainer}>
         <div className={styles.Dice}>
-          <img src={`/images/dice_${diceNumber}.png`} alt="" />
+          <img src={`/images/dice_${currentDice}.png`} alt="" />
         </div>
 
         <div className={styles.ActionButtons}>
-          <button className={styles.Actionbutton}>Roll Dice</button>
+          <button className={styles.Actionbutton}  onClick={rolldice}>Roll Dice</button> 
+          
           <button className={`${styles.Actionbutton} ${styles.BlackButton}`}>
             Show Rules
           </button>
