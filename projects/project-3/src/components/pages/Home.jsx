@@ -12,6 +12,7 @@ const Home = ({toggle}) => {
 
   
   return (
+    <>
     <div className={Styles.home}>
       <div className={Styles.ImageCon}>
         <img src="/images/dices 1.png" alt="" className={Styles.image} />
@@ -26,7 +27,16 @@ const Home = ({toggle}) => {
           <button className={Styles.Buttonone} onClick={toggle}>Start</button>
         </div>
       </div>
+      
+      
+
     </div>
+    
+    <footer style={{color: 'gray' ,display:'flex',width:'100%',justifyContent:'center',padding:'2vh 0vw',gap:'10px'}}>
+    <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    Made with <i className="icon ion-heart red"></i>  by <a href="">  Anshuman</a>
+</footer>
+    </>
   );
 }
 

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import styled from "styled-components";
 
 const Rules = () => {
   return (
@@ -24,7 +25,7 @@ flex-direction: column;
 gap : 10px;
 padding: 20px;
 
-bg-color: #FBF1F1;
+background: #FBF1F1;
 
 h2{
     font-size: 1.5rem;
