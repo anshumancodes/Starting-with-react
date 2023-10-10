@@ -3,10 +3,13 @@ import styles from "./Play.module.css";
 import { useState } from "react";
 
 const Play = ({ Intext }) => {
+
+  let diceValue = [1, 2, 3, 4, 5, 6];
   
   const [selected, setSelected] =useState(null);
   const [Nowtext , setText] = useState("Select a number");
-  const [currentDice, setDice] = useState();
+  const [currentDice, setDice] = useState(1);
+  const [score, setScore] = useState(0);
 
 
   function getRandomInt(min, max) {
@@ -25,7 +28,18 @@ const Play = ({ Intext }) => {
   
   setDice((prev)=> RandomdiceNumber);
 
+  if (selected === RandomdiceNumber) {
+    
+    setScore((prev)=> prev + 4);
+    
   }
+  else{
+    setScore((prev)=> prev - 1);
+  }
+
+  }
+
+  
 
   
 
@@ -34,7 +48,7 @@ const Play = ({ Intext }) => {
       <nav className={styles.Navbar}>
         <span className={styles.score}>
           <span className={styles.scorecounter}>
-            <span className={styles.scorevalue}>0</span>
+            <span className={styles.scorevalue}>{score}</span>
             <span className={styles.scoretext}>Score</span>
           </span>
         </span>
