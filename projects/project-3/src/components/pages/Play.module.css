@@ -94,6 +94,10 @@
     .CheckText{
         margin-top: 5vh;
     }
+    .Diceimg{
+        width: 150px;
+        height: 150px;
+    }
     
 }
 .ActionButtons{

@@ -91,14 +91,14 @@ const Play = ({  }) => {
 
       <div className={styles.Dicecontainer}>
         <div className={styles.Dice}>
-          <img src={`/images/dice_${currentDice}.png`} alt="" />
+          <img className={styles.Diceimg} src={`/images/dice_${currentDice}.png`} alt="" />
         </div>
 
         <div className={styles.ActionButtons}>
           <button className={styles.Actionbutton}  onClick={rolldice}>Roll Dice</button> 
           
           <button className={`${styles.Actionbutton} ${styles.BlackButton}`} onClick={()=>setshowrules ((prev)=>!prev) }>
-           {showrules ? "Hide Rules" : "Show Rules"} Rules
+           {showrules ? "Hide Rules" : "Show Rules"}
           </button>
         </div>
         {showrules && <Rules />}
