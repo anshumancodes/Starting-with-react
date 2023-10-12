@@ -34,7 +34,7 @@ const Home = ({toggle}) => {
     
     <footer style={{color: 'gray' ,display:'flex',width:'100%',justifyContent:'center',padding:'2vh 0vw',gap:'10px'}}>
     <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
-    Made with <i className="icon ion-heart red"></i>  by <a href="">  Anshuman</a>
+    Made with <i className="icon ion-heart red"></i>  by <a href="https://github.com/anshumancodes">  Anshuman</a>
 </footer>
     </>
   );
