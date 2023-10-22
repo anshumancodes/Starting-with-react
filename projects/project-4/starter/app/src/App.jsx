@@ -16,6 +16,8 @@ function App() {
 
   const [filteredData, setFilteredData] = useState(null)
 
+  const [selectedfood, setSelectedfood] = useState("all")
+
   
   // 
 
@@ -41,7 +43,7 @@ function App() {
 
   const handleSearch = (e) => {
     const Searchvalue = e.target.value
-    console.log(Searchvalue)
+    
 
     if(Searchvalue === ""){
       setFilteredData(null)
@@ -53,14 +55,33 @@ function App() {
     setFilteredData(filteredData)
 
   };
+
+  const filterFood=(type)=>{
+    if (type==="all"){
+      setFilteredData(data)
+      setSelectedfood("all")
+      return;
+
+    }
+
+      const filteredData = data?.filter((food) =>
+    
+      food.type.toLowerCase().includes(type.toLowerCase()))
+    
+      setFilteredData(filteredData)
+      setSelectedfood(type)
+
+  }
+
+
   if(loading) return <h1>Loading...</h1>
   if(error) return <h1>{error}</h1>
   
   return (
     <>
     
-      <Navbar searched={handleSearch}/>
-      <Searchresult data={filteredData}/>
+      <Navbar searched={handleSearch} filtertype={filterFood}/>
+      <Searchresult data={filteredData} />
       
     </>
   )
