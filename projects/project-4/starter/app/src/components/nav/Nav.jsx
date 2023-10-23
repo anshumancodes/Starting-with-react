@@ -35,6 +35,9 @@ const Navbar = styled.nav`
 const LayerOne = styled.div`
   display: flex;
   width: 90%;
+  
+  height: 10vh;
+  align-items: center;
  
   justify-content: space-between;
   flex-wrap: wrap;
@@ -42,7 +45,7 @@ const LayerOne = styled.div`
 
 const Layertwo = styled.div`
   display: flex;
-  width: 40%;
+  width: 100%;
   flex-wrap: wrap;
   gap: 2vw;
   margin-top: 1vh;
@@ -64,6 +67,8 @@ const SearchInput = styled.input`
   background-color: #fff;
   border: 1px solid red;
   outline: none;
+  height: 4vh;
+  width:300px;
   border-radius: 5px;
   width: fit-content;
   background:inherit;
