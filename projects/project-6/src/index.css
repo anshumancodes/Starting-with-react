@@ -6,6 +6,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #323334;
+ 
   font-family: 'General Sans', sans-serif;
+}
+
+body{
+  background-color: #323334;
 }
